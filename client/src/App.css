@@ -1,0 +1,121 @@
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffdde1 0%, #e0c3fc 50%, #c3e4fc 100%);
+  min-height: 100vh;
+}
+
+.cute-wrapper {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.cute-card {
+  width: 100%;
+  max-width: 650px;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 20px 45px rgba(200, 160, 220, 0.35);
+  border: 3px solid #ffe3ec;
+}
+
+.cute-title {
+  color: #a17fc2;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.cute-label {
+  color: #b98bc9;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cute-input {
+  border-radius: 14px !important;
+  border: 2px solid #f3d9ea !important;
+  padding: 0.6rem 1rem !important;
+  margin-top: 4px;
+}
+
+.cute-input:focus {
+  border-color: #d6a8f0 !important;
+  box-shadow: 0 0 0 3px rgba(214, 168, 240, 0.25) !important;
+}
+
+.cute-btn-primary {
+  background: linear-gradient(135deg, #ffb6c1, #d6a8f0) !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 0.5rem 1.6rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cute-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(214, 168, 240, 0.45);
+}
+
+.cute-btn-danger {
+  background: linear-gradient(135deg, #ffb199, #ff8ca3) !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 0.4rem 1.2rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  margin-left: 8px;
+  transition: transform 0.15s ease;
+}
+.cute-btn-danger:hover {
+  transform: translateY(-2px);
+}
+
+.cute-table {
+  margin-top: 1.2rem;
+  border-collapse: separate !important;
+  border-spacing: 0 10px;
+}
+
+.cute-table thead th {
+  color: #a17fc2;
+  border: none !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+.cute-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cute-table tbody tr {
+  background: #fff8fb;
+  box-shadow: 0 3px 8px rgba(215, 180, 220, 0.15);
+}
+
+.cute-table tbody td {
+  border: none !important;
+  padding: 0.9rem 1rem;
+  vertical-align: middle;
+  border-radius: 14px;
+}
+.cute-table tbody td:first-child {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+.cute-table tbody td:last-child {
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+}

@@ -19,10 +19,10 @@ function Users () {
         .catch(err => console.log(err))
     }
   return (
-    <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
-        <div className='w-50 bg-white rounded p-3'>
-            <Link to='/create' className='btn btn-success'> Add +</Link>
-            <table className='table'>
+    <div className='cute-wrapper'>
+        <div className='cute-card'>
+            <Link to='/create' className='btn cute-btn-primary mb-3'> Add +</Link>
+            <table className='table cute-table'>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -38,8 +38,10 @@ function Users () {
                                 <td>{user.email}</td>
                                 <td>{user.age}</td>
                                 <td>
-                                    <Link to={`/update/${user._id}`} className='btn btn-success'>Update</Link>
-                                    <button className='btn btn-danger' onClick={(e) => handleDelete(user._id)}>Delete</button>
+                                    <div className='cute-actions'>
+                                    <Link to={`/update/${user._id}`} className='btn cute-btn-primary'>✏️ Edit</Link>
+                                    <button className='btn cute-btn-danger' onClick={(e) => handleDelete(user._id)}>🗑️ Delete</button>
+                                    </div>
                                 </td>
                             </tr>
                         })

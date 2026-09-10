@@ -56,6 +56,10 @@ app.delete('/deleteUser/:id', (req, res) => {
 })
 
 app.post('/createUser', (req, res) => {
+    const { name, email, age } = req.body
+    if (!name || !email || !age) {
+        return res.status(400).json({ error: "All fields are required" })
+    }
     UserModel.create(req.body)
     .then(users => res.json(users))
     .catch(err => res.json(err))
