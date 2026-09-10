@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const dns = require('dns')
 
+const path = require('path')
+
 dns.setDefaultResultOrder('ipv4first')
 require('dotenv').config()
 const UserModel = require('./models/Users')
@@ -65,6 +67,10 @@ app.post('/createUser', (req, res) => {
     .catch(err => res.json(err))
 })
 
-app.listen(3001, () => {
+app.use(express.static(path.join(__dirname, '../client/dist')))
+app.get('/{*splat}', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+})
+app.listen(process.env.PORT || 3001, () => {
     console.log("Server is Running")
 })
