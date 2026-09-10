@@ -15,7 +15,7 @@ function CreateUser () {
       alert("Please fill in all fields before adding a user.")
       return
    }
-      axios.post("http://localhost:3001/createUser",{name, email, age})
+      axios.post("/createUser",{name, email, age})
       .then(result => {
          console.log(result)
          navigate('/')

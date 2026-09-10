@@ -11,7 +11,7 @@ const UpdateUser = () => {
         const navigate = useNavigate()
 
         useEffect(() => {
-                axios.get('http://localhost:3001/getUser/'+ id)
+                axios.get('/getUser/'+ id)
                 .then(result => {console.log(result)
                    setName(result.data.name)
                    setEmail(result.data.email)
@@ -27,7 +27,7 @@ const UpdateUser = () => {
                alert("Please fill in all fields before updating.")
                return
                 }
-               axios.put("http://localhost:3001/updateUser/"+id,{name, email, age})
+               axios.put("/updateUser/"+id,{name, email, age})
                      .then(result => {
                         console.log(result)
                         navigate('/')
