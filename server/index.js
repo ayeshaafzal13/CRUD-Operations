@@ -27,7 +27,7 @@ mongoose.connect(MONGOBD_URL)
     process.exit(1)
 })
 
-app.get('/', (req, res) => {
+app.get('/api/users', (req, res) => {
     UserModel.find({})
     .then(users => res.json(users))
     .catch(err => res.json(err))
